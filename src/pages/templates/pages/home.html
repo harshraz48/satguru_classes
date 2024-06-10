@@ -1,27 +1,33 @@
 {% extends "layouts/index.html" %}
 {% load static %}
 
-{% block title %}Docker + Django{% endblock %}
+{% block title %}Satguru Classes{% endblock %}
 
-{% block body %}
-  <!-- <div class="flex justify-center pt-24 pb-12 px-2 sm:px-0" style="background-color: aqua;">
-    <p>blue</p>
-  </div> -->
+{% block content %}
+<div id="carousel-container" class="relative w-full overflow-hidden flex justify-center items-center mb-10">
+    <div class="carousel-inner flex transition-transform duration-500" style="display: flex; transition: transform 0.5s;">
+        <div class="carousel-item flex-shrink-0 mx-1" style="flex: 0 0 50%;">
+            <img src="{% static 'images/home/1-min.png' %}" alt="Image 1" class="w-full h-auto">
+        </div>
+        <div class="carousel-item flex-shrink-0 mx-1" style="flex: 0 0 50%;">
+            <img src="{% static 'images/home/2-min.png' %}" alt="Image 2" class="w-full h-auto">
+        </div>
+        <div class="carousel-item flex-shrink-0 mx-1" style="flex: 0 0 50%;">
+            <img src="{% static 'images/home/3-min.png' %}" alt="Image 3" class="w-full h-auto">
+        </div>
+        <div class="carousel-item flex-shrink-0 mx-1" style="flex: 0 0 50%;">
+            <img src="{% static 'images/home/4-min.png' %}" alt="Image 4" class="w-full h-auto">
+        </div>
+        <!-- Add more images as needed -->
+    </div>
+    <!-- Navigation buttons -->
+    <button id="prev" class="absolute left-2 bg-gray-500 text-white rounded-full p-2">‹</button>
+    <button id="next" class="absolute right-2 bg-gray-500 text-white rounded-full p-2">›</button>
+</div>
 
-  <section class="hero">
-    <div class="hero-content">
-        <h1>Welcome to Our Coaching Center</h1>
-        <p>Expert guidance for JEE, NEET, Class X, and Class XII.</p>
-        <a href="#courses" class="cta-button">Explore Courses</a>
-    </div>
-</section>
-<section id="courses" class="courses">
-    <h2>Our Courses</h2>
-    <div class="course-list">
-        <div class="course-item">JEE</div>
-        <div class="course-item">NEET</div>
-        <div class="course-item">Class X</div>
-        <div class="course-item">Class XII</div>
-    </div>
-</section>
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }} <!-- Include parent scripts -->
+    <script src="{% static 'js/home.js'%}"></script>
 {% endblock %}

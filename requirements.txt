@@ -11,3 +11,4 @@ celery==5.4.0
 flake8==7.0.0
 isort==5.13.2
 black==24.4.2
+django-cleanup==8.1.0

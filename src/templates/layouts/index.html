@@ -2,58 +2,179 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>{% block title %}{% endblock %}</title>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A production ready example Django app that's using Docker and Docker Compose.">
+<head>
+  <title>{% block title %}{% endblock %}</title>
 
-    <link rel="stylesheet" href="{% static 'css/app.css' %}">
-    <script defer src="{% static 'js/app.js' %}"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A production ready example Django app that's using Docker and Docker Compose.">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-    {# Generated with: https://realfavicongenerator.net/ #}
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'apple-touch-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-16x16.png' %}">
-    <!-- <link rel="manifest" href="{% static 'site.webmanifest' %}">
-    <link rel="mask-icon" href="{% static 'safari-pinned-tab.svg' %}" color="#61b9d2"> -->
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-  </head>
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+  <script defer src="{% static 'js/app.js' %}"></script>
 
-  <body class="flex flex-col h-screen justify-between">
-    <!-- <div class="bg-gray-700">
-      <div class="max-w-screen-lg mx-auto py-3 px-3 sm:px-6 lg:px-8" style="background-color:brown">
-        <div class="flex items-center justify-between flex-wrap" style="background-color: rgb(42, 147, 80);">
-          <div class="flex-1 flex items-center" style="background-color: rgb(216, 203, 21);">
-            
-          </div>
-          <div class="mt-2 order-3 w-full sm:mt-0 sm:w-auto" style="background-color: rgb(180, 19, 216);">
-            <div class="rounded-md shadow-sm" >
-              <p>bahiiiiii</p>
-            </div>
-          </div>
+
+  {# Generated with: https://realfavicongenerator.net/ #}
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static 'site.webmanifest' %}">
+  <!-- <link rel="mask-icon" href="{% static 'safari-pinned-tab.svg' %}" color="#61b9d2"> -->
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="flex flex-col h-screen justify-between">
+  <div class="shadow-lg">
+    <div class="max-w-screen-2xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between flex-wrap">
+        <div>
+          <img src="{% static 'images/stg_logo.png' %}">
         </div>
-      </div>
-    </div> -->
-
-    <div class="logo">Coaching Center</div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+        <div class="block lg:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+        <nav id="menu" class="hidden lg:flex lg:items-center w-full lg:w-auto">
+          <ul class="lg:flex lg:space-x-6">
+            <li><a href="#" class="px-1 hover:text-blue-400">Home</a></li>
+            <li><a href="#" class="px-1 hover:text-blue-400">Courses Available</a></li>
+            <li><a href="#" class="px-1 hover:text-blue-400">About Us</a></li>
+            <li><a href="#" class="px-1 hover:text-blue-400">Results</a></li>
+            <li><a href="#" class="px-1 hover:text-blue-400">Contact Us</a></li>
+          </ul>
         </nav>
+      </div>
+    </div>
+  </div>
 
-    <main class="max-w-screen-lg mx-auto mb-auto">
-      {% block body %}{% endblock %}
-    </main>
+  <main class="w-full mx-auto mb-auto">
+    {% block content %}{% endblock %}
+  </main>
 
-    <footer>
-      <p>&copy; 2024 Coaching Center. All rights reserved.</p>
+  <!-- footer -->
+  <footer>
+    <div class="flex inline-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 h-max w-full">
+
+      <!-- Section 1 -->
+      <section class="m-2 p-3">
+        <h2>About Us</h2>
+        <hr class="my-2" />
+        <p>We at Satguru Classes provide best coaching for JEE, NEET, XII,
+          XI, X, IX courses at Jodhpur. With best faculty and individualised
+          learning techinques we strive to deliver the best results.
+        </p>
+        <div class="flex inline-grid grid-cols-4 gap-4 w-full my-4">
+          <section>
+            <a href="#"><img src="{% static 'icons/instagram.svg' %}"></a>
+          </section>
+          <section>
+            <a href="#"><img src="{% static 'icons/facebook.svg' %}"></a>
+          </section>
+          <section>
+            <a href="#"><img src="{% static 'icons/twitter.svg' %}"></a>
+          </section>
+          <section>
+            <a href="#"><img src="{% static 'icons/youtube.svg' %}"></a>
+          </section>
+        </div>
+      </section>
+      <section class="m-2 p-3">
+        <h2>Quick Links</h2>
+        <hr class="my-2" />
+        <ul class="list-disc mx-4">
+          <li><a href="#" class="hover:text-blue-400">Home</a></li>
+          <li><a href="#" class="hover:text-blue-400">About Us</a></li>
+          <li><a href="#" class="hover:text-blue-400">Courses</a></li>
+          <li><a href="#" class="hover:text-blue-400">Contact</a></li>
+        </ul>
+      </section>
+      <section class="m-2 p-3">
+        <h2>Courses and Programme</h2>
+        <hr class="my-2" />
+        <ul class="list-disc mx-4">
+          <li><a href="#" class="hover:text-blue-400">JEE Mains and Advance</a></li>
+          <li><a href="#" class="hover:text-blue-400">NEET</a></li>
+          <li><a href="#" class="hover:text-blue-400">XII Foundation</a></li>
+          <li><a href="#" class="hover:text-blue-400">XI Foundation</a></li>
+          <li><a href="#" class="hover:text-blue-400">X Foundation</a></li>
+          <li><a href="#" class="hover:text-blue-400">IX Foundation</a></li>
+        </ul>
+      </section>
+      <section class="m-2 p-3">
+        <h2>Our Other Facilities</h2>
+        <hr class="my-2" />
+        <ul class="list-disc mx-4">
+          <li>Both english and hindi medium available</li>
+          <li>School</li>
+          <li>Library</li>
+          <li>Hostels</li>
+          <li>Transportation</li>
+        </ul>
+      </section>
+    </div>
+    <hr />
+
+    <!-- Section -->
+    <div class="flex inline-grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 h-max w-full">
+      <section class="my-4 h-max">
+        <div class="flex flex-row items-center">
+          <section class="m-2">
+            <img src="{% static 'icons/building.svg' %}">
+          </section>
+          <section class="m-2">
+            <strong>Our Head Location</strong>
+            <p>D-165, Kirti Nagar, Mata ka Than Road, Jodhpur(Raj.)</p>
+          </section>
+        </div>
+      </section>
+      <section class="my-4 h-max">
+        <div class="flex flex-row items-center">
+          <section class="m-2">
+            <img src="{% static 'icons/building-property.svg' %}">
+          </section>
+          <section class="m-2">
+            <strong>Our Hostel and Library</strong>
+            <p>D-165, Kirti Nagar, Mata ka Than Road, Jodhpur(Raj.)</p>
+          </section>
+        </div>
+      </section>
+      <section class="my-4 h-max">
+        <div class="flex flex-row items-center mx-4">
+          <section class="m-2">
+            <img src="{% static 'icons/telephone.svg' %}">
+          </section>
+          <section class="m-2">
+            <strong>Call Us At</strong>
+            <p>9828072703, 6376947871, <br>0291-3581717</p>
+          </section>
+        </div>
+      </section>
+      <section class="my-4 h-max">
+        <div class="flex flex-row items-center">
+          <section class="m-2">
+            <img src="{% static 'icons/email.svg' %}">
+          </section>
+          <section class="m-2">
+            <strong>E-mail Us At</strong>
+            <p>tcchauhankelawa@gmail.com</p>
+          </section>
+        </div>
+      </section>
+    </div>
+    <hr />
+
+    <!-- Section 3 -->
+    <p class="py-3">Copyright &copy; 2024 Satguru Classes. All rights reserved.</p>
   </footer>
-  </body>
+
+  <!-- Block for additional scripts -->
+  {% block scripts %}{% endblock %}
+</body>
+
 </html>
