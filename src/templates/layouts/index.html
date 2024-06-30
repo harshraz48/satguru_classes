@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="{% static 'css/app.css' %}">
   <script defer src="{% static 'js/app.js' %}"></script>
 
-
   {# Generated with: https://realfavicongenerator.net/ #}
   <link rel="apple-touch-icon" sizes="180x180" href="{% static 'apple-touch-icon.png' %}">
   <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon-32x32.png' %}">
@@ -26,7 +25,7 @@
 </head>
 
 <body class="flex flex-col h-screen justify-between">
-  <div class="shadow-lg">
+  <div class="shadow-lg z-50">
     <div class="max-w-screen-2xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between flex-wrap">
         <div>
@@ -34,26 +33,25 @@
         </div>
         <div class="block lg:hidden">
           <button id="menu-btn" class="text-white focus:outline-none">
-            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-8 h-8" stroke="#000000ac" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
           </button>
         </div>
-        <nav id="menu" class="hidden lg:flex lg:items-center w-full lg:w-auto">
+        <nav id="menu" class="hidden lg:items-center lg:flex w-full lg:w-auto">
           <ul class="lg:flex lg:space-x-6">
-            <li><a href="#" class="px-1 hover:text-blue-400">Home</a></li>
-            <li><a href="#" class="px-1 hover:text-blue-400">Courses Available</a></li>
-            <li><a href="#" class="px-1 hover:text-blue-400">About Us</a></li>
-            <li><a href="#" class="px-1 hover:text-blue-400">Results</a></li>
-            <li><a href="#" class="px-1 hover:text-blue-400">Contact Us</a></li>
+            <li class="p-1"><a href="{% url 'home' %}" class="hover:text-blue-400">Home</a></li>
+            <li class="p-1"><a href="{% url 'about_us' %}" class="hover:text-blue-400">About Us</a></li>
+            <li class="p-1"><a href="{% url 'courses' %}" class="hover:text-blue-400">Courses Available</a></li>
+            <li class="p-1"><a href="{% url 'results' %}" class="hover:text-blue-400">Results</a></li>
+            <li><button class="btn px-2 hover:bg-red-700">Contact Us</button></li>
           </ul>
         </nav>
-      </div>
     </div>
   </div>
+  </div>
 
-  <main class="w-full mx-auto mb-auto">
+  <main class="w-full mx-auto mb-auto flex flex-col items-center">
     {% block content %}{% endblock %}
   </main>
 
@@ -71,16 +69,16 @@
         </p>
         <div class="flex inline-grid grid-cols-4 gap-4 w-full my-4">
           <section>
-            <a href="#"><img src="{% static 'icons/instagram.svg' %}"></a>
+            <a href="https://www.instagram.com/satguruclasses_/" target="_blank"><img src="{% static 'icons/instagram.svg' %}"></a>
           </section>
           <section>
-            <a href="#"><img src="{% static 'icons/facebook.svg' %}"></a>
+            <a href="https://www.facebook.com/satguruclasses2021?mibextid=LQQJ4d" target="_blank"><img src="{% static 'icons/facebook.svg' %}"></a>
           </section>
           <section>
-            <a href="#"><img src="{% static 'icons/twitterx.svg' %}"></a>
+            <a href="https://g.co/kgs/cnWKPS1" target="_blank"><img src="{% static 'icons/location.svg' %}"></a>
           </section>
           <section>
-            <a href="#"><img src="{% static 'icons/youtube.svg' %}"></a>
+            <a href="https://www.youtube.com/@physicsbytcchauhansir1438" target="_blank"><img src="{% static 'icons/youtube.svg' %}"></a>
           </section>
         </div>
       </section>
@@ -88,22 +86,22 @@
         <h2>Quick Links</h2>
         <hr class="my-2" />
         <ul class="list-disc mx-4">
-          <li><a href="#" class="hover:text-blue-400">Home</a></li>
-          <li><a href="#" class="hover:text-blue-400">About Us</a></li>
-          <li><a href="#" class="hover:text-blue-400">Courses</a></li>
-          <li><a href="#" class="hover:text-blue-400">Contact</a></li>
+          <li><a href="{% url 'home' %}" class="hover:text-blue-400">Home</a></li>
+          <li><a href="{% url 'about_us' %}" class="hover:text-blue-400">About Us</a></li>
+          <li><a href="{% url 'courses' %}" class="hover:text-blue-400">Courses</a></li>
+          <li><a href="{% url 'results' %}" class="hover:text-blue-400">Results</a></li>
         </ul>
       </section>
       <section class="m-2 p-3">
         <h2>Courses and Programme</h2>
         <hr class="my-2" />
         <ul class="list-disc mx-4">
-          <li><a href="#" class="hover:text-blue-400">JEE Mains and Advance</a></li>
-          <li><a href="#" class="hover:text-blue-400">NEET</a></li>
-          <li><a href="#" class="hover:text-blue-400">XII Foundation</a></li>
-          <li><a href="#" class="hover:text-blue-400">XI Foundation</a></li>
-          <li><a href="#" class="hover:text-blue-400">X Foundation</a></li>
-          <li><a href="#" class="hover:text-blue-400">IX Foundation</a></li>
+          <li><a href="{% url 'courses' %}#neet" class="hover:text-blue-400">NEET</a></li>
+          <li><a href="{% url 'courses' %}#jee" class="hover:text-blue-400">JEE Mains and Advance</a></li>
+          <li><a href="{% url 'courses' %}#xii" class="hover:text-blue-400">XII Foundation</a></li>
+          <li><a href="{% url 'courses' %}#xi" class="hover:text-blue-400">XI Foundation</a></li>
+          <li><a href="{% url 'courses' %}#xf" class="hover:text-blue-400">X Foundation</a></li>
+          <li><a href="{% url 'courses' %}#ix" class="hover:text-blue-400">IX Foundation</a></li>
         </ul>
       </section>
       <section class="m-2 p-3">
@@ -120,7 +118,7 @@
     </div>
     <hr />
 
-    <!-- Section -->
+    <!-- Section 2-->
     <div class="flex inline-grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 h-max w-full">
       <section class="my-4 h-max">
         <div class="flex flex-row items-center">

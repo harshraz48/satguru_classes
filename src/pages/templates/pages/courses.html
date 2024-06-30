@@ -1,0 +1,505 @@
+{% extends "layouts/index.html" %}
+{% load static %}
+
+{% block title %}Satguru Classes{% endblock %}
+
+{% block content %}
+<div class="flex flex-col lg:flex-row w-full">
+
+    <!-- Vertical Navigation -->
+    <nav class="w-full lg:w-1/5 h-auto lg:h-screen bg-blue-950 opacity-90 text-white p-4">
+        <ul id="navbar" class="flex lg:flex-col flex-wrap justify-around lg:justify-start">
+            <li>
+                <a href="#neet" class="block p-2 text-slate-300 hover:text-white" onclick="highlight('neet')">
+                    NEET-UG Pre-Medical
+                </a>
+            </li>
+            <hr class="white-line" />
+            <li>
+                <a href="#jee" class="block p-2 text-slate-300 hover:text-white" onclick="highlight('jee')">
+                    IIT-JEE Mains+Advanced
+                </a>
+            </li>
+            <hr class="white-line" />
+            <li>
+                <a href="#xii" class="block p-2 text-slate-300 hover:text-white" onclick="highlight('xii')">
+                    XII Foundation
+                </a>
+            </li>
+            <hr class="white-line" />
+            <li>
+                <a href="#xi" class="block p-2 text-slate-300 hover:text-white" onclick="highlight('xi')">
+                    XI Foundation
+                </a>
+            </li>
+            <hr class="white-line" />
+            <li>
+                <a href="#xf" class="block p-2 text-slate-300 hover:text-white" onclick="highlight('xf')">
+                    X Pre-Foundation
+                </a>
+            </li>
+            <hr class="white-line" />
+            <li>
+                <a href="#ix" class="block p-2 text-slate-300 hover:text-white" onclick="highlight('ix')">
+                    IX Pre-Foundation
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Content Area -->
+    <div class="flex-1 mb-10">
+
+        <!-- NEET course -->
+        <div id="neet" class="content">
+            <div class="flex flex-col">
+                <div class="bg-slate-100">
+                    <h1 class="main-heading text-slate-700 text-center">
+                        NEET-UG Pre Medical Entrance Exam
+                    </h1>
+                </div>
+                <div class="flex flex-col lg:flex-row">
+                    <div
+                        class="flex flex-col justify-center border-l-2 items-center basis-full lg:basis-1/3 my-2 h-max">
+                        <img class="size-16 my-5" src="{% static 'icons/eng_medium.svg' %}">
+                        <h2 class="text-lg text-slate-500 mb-5 font-bold">Both English and Hindi Medium</h2>
+                    </div>
+                    <div
+                        class="flex flex-col justify-center border-l-2 items-center basis-full lg:basis-1/3 my-2 h-max">
+                        <img class="size-16 my-5" src="{% static 'icons/study_material.svg' %}">
+                        <h2 class="text-lg text-slate-500 mb-5 font-bold">Study Material Available</h2>
+                    </div>
+                    <div
+                        class="flex flex-col justify-center border-l-2 items-center basis-full lg:basis-1/3 my-2 h-max">
+                        <img class="size-16 my-5" src="{% static 'icons/timely_test.svg' %}">
+                        <h2 class="text-lg text-slate-500 mb-5 font-bold">Timely Updated Tests</h2>
+                    </div>
+                </div>
+                <div class="bg-slate-100">
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                Regular weekly NEET level test series with updated syllabus
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                Register with just Rs. 500 with upto 30% off on total fee
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                1:1 doubt solving sessions with separate focus on every student
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- IIT JEE -->
+        <div id="jee" class="content hidden">
+            <div class="flex flex-col">
+                <div class="bg-slate-100">
+                    <h1 class="main-heading text-slate-700 text-center">
+                        IIT Joint Entrance Exam
+                    </h1>
+                </div>
+                <div class="flex flex-col lg:flex-row">
+                    <div
+                        class="flex flex-col justify-center border-l-2 items-center basis-full lg:basis-1/3 my-2 h-max">
+                        <img class="size-16 my-5" src="{% static 'icons/eng_medium.svg' %}">
+                        <h2 class="text-lg text-slate-500 mb-5 font-bold">Both English and Hindi Medium</h2>
+                    </div>
+                    <div
+                        class="flex flex-col justify-center border-l-2 items-center basis-full lg:basis-1/3 my-2 h-max">
+                        <img class="size-16 my-5" src="{% static 'icons/study_material.svg' %}">
+                        <h2 class="text-lg text-slate-500 mb-5 font-bold">Study Material Available</h2>
+                    </div>
+                    <div
+                        class="flex flex-col justify-center border-l-2 items-center basis-full lg:basis-1/3 my-2 h-max">
+                        <img class="size-16 my-5" src="{% static 'icons/timely_test.svg' %}">
+                        <h2 class="text-lg text-slate-500 mb-5 font-bold">Timely Updated Tests</h2>
+                    </div>
+                </div>
+                <div class="bg-slate-100">
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                Regular weekly JEE level test series with updated syllabus
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                Register with just Rs. 500 with upto 30% off on total fee
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                Separate focus on mains and advanced with 1:1 doubt solving sessions
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- XII Foundation -->
+        <div id="xii" class="content hidden">
+            <div class="flex flex-col">
+                <div class="bg-slate-100">
+                    <h1 class="main-heading text-slate-700 text-center">
+                        XII Foundation
+                    </h1>
+                </div>
+                <div class="flex flex-col lg:flex-row">
+                    <div
+                        class="flex flex-col justify-center border-l-2 items-center basis-full lg:basis-1/3 my-2 h-max">
+                        <img class="size-16 my-5" src="{% static 'icons/eng_medium.svg' %}">
+                        <h2 class="text-lg text-slate-500 mb-5 font-bold">Both English and Hindi Medium</h2>
+                    </div>
+                    <div
+                        class="flex flex-col justify-center border-l-2 items-center basis-full lg:basis-1/3 my-2 h-max">
+                        <img class="size-16 my-5" src="{% static 'icons/study_material.svg' %}">
+                        <h2 class="text-lg text-slate-500 mb-5 font-bold">With School Facility</h2>
+                    </div>
+                    <div
+                        class="flex flex-col justify-center border-l-2 items-center basis-full lg:basis-1/3 my-2 h-max">
+                        <img class="size-16 my-5" src="{% static 'icons/timely_test.svg' %}">
+                        <h2 class="text-lg text-slate-500 mb-5 font-bold">Timely Tests</h2>
+                    </div>
+                </div>
+                <div class="bg-slate-100">
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                Subjects available: Physics, Chemistry, Mathematics and Biology
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                Top record results in XII Science Maths and Biology boards
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                Special focus on boards level preparation
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                Register with just Rs. 500 with upto 30% off on total fee
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- XI Foundation -->
+        <div id="xi" class="content hidden">
+            <div class="flex flex-col">
+                <div class="bg-slate-100">
+                    <h1 class="main-heading text-slate-700 text-center">
+                        XI Foundation
+                    </h1>
+                </div>
+                <div class="flex flex-col lg:flex-row">
+                    <div
+                        class="flex flex-col justify-center border-l-2 items-center basis-full lg:basis-1/3 my-2 h-max">
+                        <img class="size-16 my-5" src="{% static 'icons/eng_medium.svg' %}">
+                        <h2 class="text-lg text-slate-500 mb-5 font-bold">Both English and Hindi Medium</h2>
+                    </div>
+                    <div
+                        class="flex flex-col justify-center border-l-2 items-center basis-full lg:basis-1/3 my-2 h-max">
+                        <img class="size-16 my-5" src="{% static 'icons/study_material.svg' %}">
+                        <h2 class="text-lg text-slate-500 mb-5 font-bold">With School Facility</h2>
+                    </div>
+                    <div
+                        class="flex flex-col justify-center border-l-2 items-center basis-full lg:basis-1/3 my-2 h-max">
+                        <img class="size-16 my-5" src="{% static 'icons/timely_test.svg' %}">
+                        <h2 class="text-lg text-slate-500 mb-5 font-bold">Timely Tests</h2>
+                    </div>
+                </div>
+                <div class="bg-slate-100">
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                Subjects available: Physics, Chemistry, Mathematics and Biology
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                Register with just Rs. 500 with upto 30% off on total fee
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                Laying Foundation for PCM and PCB with a comprehensive start
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- X PRE Foundation -->
+        <div id="xf" class="content hidden">
+            <div class="flex flex-col">
+                <div class="bg-slate-100">
+                    <h1 class="main-heading text-slate-700 text-center">
+                        X Pre Foundation
+                    </h1>
+                </div>
+                <div class="flex flex-col lg:flex-row">
+                    <div
+                        class="flex flex-col justify-center border-l-2 items-center basis-full lg:basis-1/3 my-2 h-max">
+                        <img class="size-16 my-5" src="{% static 'icons/eng_medium.svg' %}">
+                        <h2 class="text-lg text-slate-500 mb-5 font-bold">Both English and Hindi Medium</h2>
+                    </div>
+                    <div
+                        class="flex flex-col justify-center border-l-2 items-center basis-full lg:basis-1/3 my-2 h-max">
+                        <img class="size-16 my-5" src="{% static 'icons/study_material.svg' %}">
+                        <h2 class="text-lg text-slate-500 mb-5 font-bold">With School Facility</h2>
+                    </div>
+                    <div
+                        class="flex flex-col justify-center border-l-2 items-center basis-full lg:basis-1/3 my-2 h-max">
+                        <img class="size-16 my-5" src="{% static 'icons/timely_test.svg' %}">
+                        <h2 class="text-lg text-slate-500 mb-5 font-bold">Timely Updated Tests</h2>
+                    </div>
+                </div>
+                <div class="bg-slate-100">
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                Subjects available: Science, Mathematics, English and Hindi
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                Top notch boards results every year in both english and hindi medium
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                Register with just Rs. 500 with upto 30% off on total fee
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                Laying Foundation for further PCM and PCB enthusiats
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- IX Pre Foundation -->
+        <div id="ix" class="content hidden">
+            <div class="flex flex-col">
+                <div class="bg-slate-100">
+                    <h1 class="main-heading text-slate-700 text-center">
+                        IX Pre Foundation
+                    </h1>
+                </div>
+                <div class="flex flex-col lg:flex-row">
+                    <div
+                        class="flex flex-col justify-center border-l-2 items-center basis-full lg:basis-1/3 my-2 h-max">
+                        <img class="size-16 my-5" src="{% static 'icons/eng_medium.svg' %}">
+                        <h2 class="text-lg text-slate-500 mb-5 font-bold">Both English and Hindi Medium</h2>
+                    </div>
+                    <div
+                        class="flex flex-col justify-center border-l-2 items-center basis-full lg:basis-1/3 my-2 h-max">
+                        <img class="size-16 my-5" src="{% static 'icons/study_material.svg' %}">
+                        <h2 class="text-lg text-slate-500 mb-5 font-bold">With School Facility</h2>
+                    </div>
+                    <div
+                        class="flex flex-col justify-center border-l-2 items-center basis-full lg:basis-1/3 my-2 h-max">
+                        <img class="size-16 my-5" src="{% static 'icons/timely_test.svg' %}">
+                        <h2 class="text-lg text-slate-500 mb-5 font-bold">Timely Tests</h2>
+                    </div>
+                </div>
+                <div class="bg-slate-100">
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                Subjects available: Science, Mathematics, English and Hindi
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                Register with just Rs. 500 with upto 30% off on total fee
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-row border-b-2 px-5 py-2">
+                        <div>
+                            <img class="px-3 size-16" src="{% static 'icons/check_box.svg' %}">
+                        </div>
+                        <div class="flex justify-center items-center">
+                            <h1 class="text-md lg:text-lg text-slate-500">
+                                Comprehensive study with clarity of concepts in both hindi and english medium
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ block.super }} <!-- Include parent scripts -->
+<script>
+    function highlight(sectionId) {
+        // Remove 'active' class from all links
+        document.querySelectorAll('#navbar a').forEach(link => {
+            link.classList.remove('font-bold', 'text-sky-400');
+            link.classList.add('text-slate-300');
+        });
+
+        // Add 'active' class to the clicked link
+        document.querySelector(`#navbar a[href="#${sectionId}"]`).classList.remove('font-bold', 'text-slate-300');
+        document.querySelector(`#navbar a[href="#${sectionId}"]`).classList.add('font-bold', 'text-sky-400');
+
+        // Show the selected content section
+        showContent(sectionId);
+
+        // Store the selected section in localStorage
+        localStorage.setItem('selectedSection', sectionId);
+    }
+
+    function showContent(id) {
+        // Hide all content divs
+        document.querySelectorAll('.content').forEach(div => div.classList.add('hidden'));
+
+        // Show the selected content div
+        document.getElementById(id).classList.remove('hidden');
+    }
+
+    function navigationType() {
+        var result;
+        var p;
+
+        if (window.performance.navigation) {
+            result = window.performance.navigation;
+            if (result == 255) { result = 3 }
+        }
+
+        if (window.performance.getEntriesByType("navigation")) {
+            p = window.performance.getEntriesByType("navigation")[0].type;
+
+            if (p == 'navigate') { result = 0 }
+            if (p == 'reload') { result = 1 }
+            if (p == 'back_forward') { result = 2 }
+        }
+        return result;
+    }
+
+    // Highlight the default section (neet) on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        var nav = navigationType();
+        var selectedSection;
+        if (nav == 1) {
+            var hash = window.location.hash;
+            selectedSection = hash.substring(1) || 'neet';
+        }
+        else if (nav == 0) {
+            var hash = window.location.hash;
+            selectedSection = hash.substring(1) || 'neet';
+        }
+        else if (nav == 2) {
+            selectedSection = localStorage.getItem('selectedSection') || 'neet';
+        }
+        else {
+            selectedSection = 'neet';
+        }
+        highlight(selectedSection);
+    });
+</script>
+{% endblock %}

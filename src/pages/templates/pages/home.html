@@ -4,30 +4,264 @@
 {% block title %}Satguru Classes{% endblock %}
 
 {% block content %}
-<div id="carousel-container" class="relative w-full overflow-hidden flex justify-center items-center mb-10">
-    <div class="carousel-inner flex transition-transform duration-500" style="display: flex; transition: transform 0.5s;">
-        <div class="carousel-item flex-shrink-0 mx-1" style="flex: 0 0 50%;">
-            <img src="{% static 'images/home/1-min.png' %}" alt="Image 1" class="w-full h-auto">
+
+<!-- carousel -->
+<div id="carousel-container" class="relative w-full overflow-hidden flex flex-row justify-center items-center mb-16">
+  <div class="carousel-inner flex transition-transform duration-500">
+    <div class="carousel-item flex-shrink-0 mx-1">
+      <img src="{% static 'images/home/1-min.jpg' %}" alt="Image 1" class="w-full h-auto">
+    </div>
+    <div class="carousel-item flex-shrink-0 mx-1">
+      <img src="{% static 'images/home/2-min.jpg' %}" alt="Image 2" class="w-full h-auto">
+    </div>
+    <div class="carousel-item flex-shrink-0 mx-1">
+      <img src="{% static 'images/home/3-min.jpg' %}" alt="Image 3" class="w-full h-auto">
+    </div>
+    <div class="carousel-item flex-shrink-0 mx-1">
+      <img src="{% static 'images/home/4-min.jpg' %}" alt="Image 4" class="w-full h-auto">
+    </div>
+    <!-- Add more images as needed -->
+  </div>
+  <!-- Navigation buttons -->
+  <button id="prev" class="absolute left-2 bg-gray-600 text-white rounded-full p-2">‹</button>
+  <button id="next" class="absolute right-2 bg-gray-600 text-white rounded-full p-2">›</button>
+</div>
+
+<!-- About us section -->
+<div class="max-w-screen-2xl inline-grid grid-cols-1 lg:grid-cols-2 h-max">
+  <section class="lg:m-5 p-3">
+    <p class="my-6">At Satguru Classes, we believe in the importance of a well-rounded education. Our
+      state-of-the-art facilities include modern classrooms, fully equipped science and computer labs, a comprehensive
+      library, and transportation facilities. We also provide comfortable and secure hostel accommodations, fostering a
+      supportive and disciplined environment for our students.
+    </p>
+    <p class="my-6">Our mission is to empower students with the knowledge, skills, and confidence to excel
+      in
+      their academic and
+      professional journeys. We envision a future where our students not only succeed in competitive exams but also
+      emerge as well-rounded individuals ready to contribute positively to society.</p>
+  </section>
+  <section class="lg:m-5 p-3">
+    <p class="red-text">ABOUT SATGURU CLASSES</p>
+    <h1 class="main-heading">Best Coaching In Jodhpur for JEE, NEET, XII, XI, X And IX</h1>
+    <p class="my-6">We at Satguru Classes provide best coaching for JEE, NEET, XII,
+      XI, X, IX courses in both english and hindi medium at Jodhpur. With best faculty and individualised
+      learning techinques we strive to deliver the best results.</p>
+    <a href="{% url 'about_us' %}">
+      <button class="btn hover:bg-red-700">Read More</button>
+    </a>
+  </section>
+</div>
+
+<!-- Results section -->
+<div class="w-full inline-grid grid-cols-1 lg:grid-cols-2 h-max my-16">
+  <section class="w-full">
+    <div id="carousel-container-2" class="relative overflow-hidden flex flex-row justify-center items-center mb-0">
+      <div class="carousel-inner-2 flex transition-transform duration-500">
+        <div class="carousel-item-2 flex-shrink-0 mx-1">
+          <img src="{% static 'images/home/5-min.jpg' %}" alt="Image 1" class="w-full h-auto">
         </div>
-        <div class="carousel-item flex-shrink-0 mx-1" style="flex: 0 0 50%;">
-            <img src="{% static 'images/home/2-min.png' %}" alt="Image 2" class="w-full h-auto">
+        <div class="carousel-item-2 flex-shrink-0 mx-1">
+          <img src="{% static 'images/home/6-min.jpg' %}" alt="Image 2" class="w-full h-auto">
         </div>
-        <div class="carousel-item flex-shrink-0 mx-1" style="flex: 0 0 50%;">
-            <img src="{% static 'images/home/3-min.png' %}" alt="Image 3" class="w-full h-auto">
+        <div class="carousel-item-2 flex-shrink-0 mx-1">
+          <img src="{% static 'images/home/7-min.jpg' %}" alt="Image 3" class="w-full h-auto">
         </div>
-        <div class="carousel-item flex-shrink-0 mx-1" style="flex: 0 0 50%;">
-            <img src="{% static 'images/home/4-min.png' %}" alt="Image 4" class="w-full h-auto">
+        <div class="carousel-item-2 flex-shrink-0 mx-1">
+          <img src="{% static 'images/home/8-min.jpg' %}" alt="Image 4" class="w-full h-auto">
         </div>
         <!-- Add more images as needed -->
+      </div>
+      <!-- Navigation buttons -->
+      <button id="prev02" class="absolute left-2 bg-gray-600 text-white rounded-full p-2">‹</button>
+      <button id="next02" class="absolute right-2 bg-gray-600 text-white rounded-full p-2">›</button>
     </div>
-    <!-- Navigation buttons -->
-    <button id="prev" class="absolute left-2 bg-gray-500 text-white rounded-full p-2">‹</button>
-    <button id="next" class="absolute right-2 bg-gray-500 text-white rounded-full p-2">›</button>
+  </section>
+  <section class="px-16 py-6 bg-blue-100">
+    <div class="flex flex-row">
+      <div>
+        <img src="{% static 'icons/check_box.svg' %}">
+      </div>
+      <div class="px-3 py-2">
+        <h1 class="result-heading">Top NEET results every year</h1>
+        <p>Consecutive top results in NEET
+          including selection in AIIMS Delhi
+        </p>
+      </div>
+    </div>
+    <hr class="my-5 blue-line" />
+    <div class="flex flex-row">
+      <div>
+        <img src="{% static 'icons/check_box.svg' %}">
+      </div>
+      <div class="px-3 py-2">
+        <h1 class="result-heading">Excellent XII and X results</h1>
+        <p>More than ten 90+ percent in XII
+          and X in english and hindi medium every year
+        </p>
+      </div>
+    </div>
+    <hr class="my-5 blue-line" />
+    <div class="flex flex-row">
+      <div>
+        <img src="{% static 'icons/check_box.svg' %}">
+      </div>
+      <div class="px-3 py-2">
+        <h1 class="result-heading">Selections in JEE Mains and Advanced</h1>
+        <p>Recored students clear JEE every year</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Courses section -->
+<div class="flex flex-col items-center max-w-screen-2xl my-10">
+  <p class="red-text">OUR ACADEMIC</p>
+  <h1 class="main-heading text-center">Courses At Satguru Classes</h1>
+  <p class="mb-10 max-w-screen-xs s:max-w-screen-s md:max-w-screen-md text-center">Courses we provide with the best
+    faculties, updated syllabus
+    and top notch study material. We have earned this reputation by
+    delivering constant quality education and successful results.
+  </p>
+  <div class="grid grid-rows-4 md:grid-rows-2 lg:grid-rows-1 grid-flow-col gap-10">
+    <a href="{% url 'courses' %}#neet">
+      <button
+        class="btn-course hover:bg-red-600 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 py-7 px-11">
+        <h1 class="text-xl font-bold">
+          NEET <br /> (Pre-Medical UG)
+        </h1>
+        <h6 class="text-xs py-4">
+          Our NEET coaching program is tailored for students aiming to enter the medical field.
+        </h6>
+      </button>
+    </a>
+    <a href="{% url 'courses' %}#jee">
+      <button
+        class="btn-course hover:bg-red-600 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 py-7 px-11">
+        <h1 class="text-xl font-bold">
+          JEE Mains and Advanced
+        </h1>
+        <h6 class="text-xs py-4">
+          Our IIT JEE coaching program provide intensive training in Physics,
+          Chemistry, and Mathematics.
+        </h6>
+      </button>
+    </a>
+    <a href="{% url 'courses' %}#xii">
+      <button
+        class="btn-course hover:bg-red-600 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 py-7 px-11">
+        <h1 class="text-xl font-bold">
+          XII Foundation <br /> (English + Hindi)
+        </h1>
+        <h6 class="text-xs py-4">
+          The intermediate courses for grades XI and XII provide in-depth preparation for board exams.
+        </h6>
+      </button>
+    </a>
+    <a href="{% url 'courses' %}#xf">
+      <button
+        class="btn-course hover:bg-red-600 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 py-7 px-11">
+        <h1 class="text-xl font-bold">
+          X Foundation <br /> (English + Hindi)
+        </h1>
+        <h6 class="text-xs py-4">
+          Our courses for grades IX and X are designed to build a conceptual understanding in Science.
+        </h6>
+      </button>
+    </a>
+  </div>
+  <a href="{% url 'courses' %}">
+    <button class="btn my-7 hover:bg-red-700">Show More</button></a>
+</div>
+
+<!-- Facilities section -->
+<div class="flex flex-col mb-16 max-w-screen-xs md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl items-center">
+  <div class="flex flex-row">
+    <div class="flex flex-col md:basis-1/3 m-5 px-1 py-10">
+      <p class="red-text">FACILITIES</p>
+      <h1 class="main-heading">What We Provide</h1>
+    </div>
+    <div class="flex md:basis-2/3 m-5 px-1 py-10">
+      <p>At Satguru Classes, we are dedicated to fostering an environment that nurtures academic excellence.
+        Our state-of-the-art facilities, combined with our comprehensive and innovative curriculum,
+        provide students with the tools they need to succeed in competitive exams and beyond by
+        providing unparalleled support and motivation.</p>
+    </div>
+  </div>
+  <div class="grid grid-rows-6 md:grid-rows-6 xl:grid-rows-2 grid-flow-col gap-5">
+    <div class="facilities-content" style="background-image: url('../../static/images/facilities/School-min.jpg')">
+      <div class="facilities">
+        <h1 class="text-xl font-bold">
+          SCHOOL
+        </h1>
+        <h6 class="text-xs">
+          Our integrated school program offers a robust curriculum designed to provide students with a comprehensive
+          education.
+        </h6>
+      </div>
+    </div>
+    <div class="facilities-content"
+      style="background-image: url('../../static/images/facilities/Transportation-min.jpg')">
+      <div class="facilities">
+        <h1 class="text-xl font-bold">
+          TRANSPORTATION
+        </h1>
+        <h6 class="text-xs">
+          Reliable transportation options are provided for day scholars, ensuring safe and convenient travel to and from
+          the institute
+        </h6>
+      </div>
+    </div>
+    <div class="facilities-content" style="background-image: url('../../static/images/facilities/Hostel-min.jpg')">
+      <div class="facilities">
+        <h1 class="text-xl font-bold">
+          HOSTEL
+        </h1>
+        <h6 class="text-xs">
+          Our hostel facilities are designed to provide a safe, comfortable, and conducive living environment for
+          students.
+        </h6>
+      </div>
+    </div>
+    <div class="facilities-content" style="background-image: url('../../static/images/facilities/Library-min.jpg')">
+      <div class="facilities">
+        <h1 class="text-xl font-bold">
+          LIBRARY
+        </h1>
+        <h6 class="text-xs">
+          The library is a quiet sanctuary for students to study, research, and expand their knowledge.
+        </h6>
+      </div>
+    </div>
+    <div class="facilities-content"
+      style="background-image: url('../../static/images/facilities/Personal Attention-min.jpg')">
+      <div class="facilities">
+        <h1 class="text-xl font-bold">
+          PERSONAL ATTENTION
+        </h1>
+        <h6 class="text-xs">
+          Personal Attention to all the student basis on how they score and
+          counselling facilities after the exams as well.
+        </h6>
+      </div>
+    </div>
+    <div class="facilities-content" style="background-image: url('../../static/images/facilities/Goodies-min.jpg')">
+      <div class="facilities">
+        <h1 class="text-xl font-bold">
+          GOODIES
+        </h1>
+        <h6 class="text-xs">
+          Two t-shirts, a hoodie, a bag and study material are provided
+          to each student on admission.
+        </h6>
+      </div>
+    </div>
+  </div>
 </div>
 
 {% endblock %}
 
 {% block scripts %}
-    {{ block.super }} <!-- Include parent scripts -->
-    <script src="{% static 'js/home.js'%}"></script>
+{{ block.super }} <!-- Include parent scripts -->
+<script src="{% static 'js/home.js'%}"></script>
 {% endblock %}

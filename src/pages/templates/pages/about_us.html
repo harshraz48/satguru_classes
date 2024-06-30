@@ -1,0 +1,244 @@
+{% extends "layouts/index.html" %}
+{% load static %}
+
+{% block title %}Satguru Classes{% endblock %}
+
+{% block content %}
+
+<!-- Mission and Vision  -->
+<div class="flex flex-row flex-wrap lg:flex-nowrap justify-center my-10 max-w-screen-2xl">
+    <div class="flex flex-col basis-full lg:basis-1/3 mx-4 my-5 h-max">
+        <h1 class="main-heading">ABOUT SATGURU</h1>
+        <p>
+            Welcome to Satguru Classes, a premier educational institution dedicated to nurturing young minds and
+            preparing them for the challenges of competitive exams like IIT JEE and NEET. Founded on the principles of
+            academic excellence and holistic development, Satguru Classes is a beacon of quality education in the
+            region.<br /><br />
+
+            Our institute offers a comprehensive range of courses for students in grades IX, X, XI, and XII,
+            meticulously designed to build strong foundations in science. Our curriculum aligns with
+            CBSE and RBSE, ensuring that students are well-prepared for their board exams and future
+            academic pursuits.<br /><br />
+
+            Our mission is to empower students with the knowledge, skills, and confidence to excel in their academic and
+            professional journeys. We envision a future where our students not only succeed in competitive exams but
+            also emerge as well-rounded individuals ready to contribute positively to society.<br /><br />
+
+            Join us at Satguru Classes and embark on a path to academic excellence and personal growth. For more
+            information, visit our website or
+            contact us directly. We look forward to welcoming you to our community.
+        </p>
+    </div>
+    <div class="flex flex-col basis-full lg:basis-1/3 mx-4 my-10 h-max">
+        <div class="about_us shadow-xl" style="background-image: url('../../static/images/about_us/Mission-min.jpg')">
+        </div>
+        <div class="bg-blue-950 shadow-xl mt-5 pb-4 flex flex-col">
+            <div class="flex flex-row mx-10 pt-10 justify-center items-center">
+                <div>
+                    <img class="w-10 h-10" src="{% static 'icons/mission.svg' %}">
+                </div>
+                <div class="px-3">
+                    <h2 class="text-white text-xl font-bold">Satguru Mission</h2>
+                </div>
+            </div>
+            <p class="text-slate-300 p-8 text-sm">At Satguru Classes, our mission is to provide a comprehensive and
+                holistic
+                educational experience that prepares students for the challenges of competitive exams such as IIT JEE
+                and NEET.
+                Our goal is to create an environment where students can thrive academically and personally, developing
+                the skills and knowledge necessary to succeed in higher education.</p>
+        </div>
+    </div>
+    <div class="flex flex-col basis-full lg:basis-1/3 mx-4 my-10 h-max">
+        <div class="bg-gray-200 shadow-xl mb-5 flex flex-col">
+            <div class="flex flex-row mx-10 pt-10 justify-center items-center">
+                <div>
+                    <img class="w-10 h-10" src="{% static 'icons/vision.svg' %}">
+                </div>
+                <div class="px-3">
+                    <h2 class="text-xl font-bold">Satguru Vision</h2>
+                </div>
+            </div>
+            <p class="p-8 pb-14">Our vision is to be a leading educational institution recognized for excellence in
+                academic achievement, innovative teaching methodologies, and unwavering commitment to student success.
+                We strive to empower students to reach their full potential, become leaders in their chosen fields, and
+                contribute positively to society.</p>
+        </div>
+        <div class="about_us shadow-xl" style="background-image: url('../../static/images/about_us/Vision-min.jpg')">
+        </div>
+    </div>
+</div>
+
+<!-- founder section -->
+<div class="w-full flex flex-row flex-wrap lg:flex-nowrap justify-center h-max py-5 my-16 bg-gray-200">
+    <section class="basis-full lg:basis-1/3 w-full flex justify-center">
+        <img src="{% static 'images/about_us/director.png' %}" alt="Image 4"
+            class="w-auto h-80 border-8 border-gray-300 shadow-xl">
+    </section>
+    <section class="basis-full lg:basis-2/3 px-16 py-6 content-center">
+        <p class="red-text">DEAR STUDENTS</p>
+        <h1 class="main-heading">Message From Our Founding Director</h1>
+        <p>
+            "At Satguru Classes, we team up with our utmost dedication to ensure that your
+            dreams become reality. We strive to provide a competitive environment that nurtures your
+            future. With our hardworking team of faculty and their experiences that helped many
+            students achieve their dreams, we ensure you the best of your result. It sure is a
+            competitive world ahead, so kick-start your journey with passion, achieve your goals and
+            succeed.<br />
+            I wish all the best to all my students. May all your dreams come true, and for that, I
+            do ensure all my time and blessings.<br>
+            When you tread with all your focus, that's when you succeed."<br /><br />
+            -T.C. Chauhan<br />
+            (Director and HOD Physics, Satguru Classes)
+        </p>
+    </section>
+</div>
+
+<!-- Methods section -->
+<div class="flex flex-col mb-16 max-w-screen-xs md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl items-center">
+    <div class="flex flex-col m-5 px-1 py-10">
+        <p class="red-text text-center">METHODOLOGIES</p>
+        <h1 class="main-heading text-center">Our Teaching methods</h1>
+        <p class="text-center">Our small class sizes allow for personalized attention, ensuring that each student’s
+            unique needs are met. Regular assessments, mock tests, and performance analyses are integral parts of our
+            teaching process, providing continuous feedback and improvement opportunities.</p>
+    </div>
+    <div class="grid grid-rows-6 md:grid-rows-6 xl:grid-rows-2 grid-flow-col gap-5">
+        <div class="methods-content shadow-xl py-5 px-11">
+            <img class="facilities-icon" src="{% static 'icons/faculty.svg' %}">
+            <h1 class="text-xl font-bold">
+                Proficient Faculty Team
+            </h1>
+            <h6 class="text-xs py-4">
+                Having immense experience, following
+                tested and unique pedagogy and especially
+                who are passionate about teaching and
+                helping students.
+            </h6>
+        </div>
+        <div class="methods-content shadow-xl py-5 px-11">
+            <img class="facilities-icon" src="{% static 'icons/batch_size.svg' %}">
+            <h1 class="text-xl font-bold">
+                Modest Batch Size
+            </h1>
+            <h6 class="text-xs py-4">
+                Small batch size to maintain individual
+                attention to everyone and resolve doubts or
+                confusion related to each and every
+                subject or topic.
+            </h6>
+        </div>
+        <div class="methods-content shadow-xl py-5 px-11">
+            <img class="facilities-icon" src="{% static 'icons/study_material.svg' %}">
+            <h1 class="text-xl font-bold">
+                Complete Study Material
+            </h1>
+            <h6 class="text-xs py-4">
+                Having comprehensive coverage of topics
+                ensures that students focus only on
+                relevant knowledge and quickly acquire the
+                ability to crack the examination.
+            </h6>
+        </div>
+        <div class="methods-content shadow-xl py-5 px-11">
+            <img class="facilities-icon" src="{% static 'icons/free_lecture.svg' %}">
+            <h1 class="text-xl font-bold">
+                Free Guest Lectures
+            </h1>
+            <h6 class="text-xs py-4">
+                By senior faculties,
+                and exam toppers for the insight
+                development of students through their
+                experience.
+            </h6>
+        </div>
+        <div class="methods-content shadow-xl py-5 px-11">
+            <img class="facilities-icon" src="{% static 'icons/test_series.svg' %}">
+            <h1 class="text-xl font-bold">
+                Test Series
+            </h1>
+            <h6 class="text-xs py-4">
+                A proven concept that tests your progress
+                and approaches with quality evaluation,
+                unlocks your best potential and increases
+                your chances of selection.
+            </h6>
+        </div>
+        <div class="methods-content shadow-xl py-5 px-11">
+            <img class="facilities-icon" src="{% static 'icons/timely_test.svg' %}">
+            <h1 class="text-xl font-bold">
+                Complete Exam Exposure
+            </h1>
+            <h6 class="text-xs py-4">
+                Considering the latest trend and actual
+                standards of each course provided with
+                excellent set of questions.
+            </h6>
+        </div>
+    </div>
+</div>
+
+<!-- Achievements section -->
+<div class="w-full flex flex-col lg:flex-wrap justify-center max-w-screen-2xl h-auto my-20">
+    <p class="red-text text-center">NOTABLE MILESTONES</p>
+    <h1 class="main-heading text-center mb-10">Our Achievements</h1>
+    <div class="relative my-10">
+        <!-- Image -->
+        <img src="{% static 'images/about_us/Achievement-min.jpg' %}" alt="Image 4"
+            class="w-auto h-full object-cover hidden lg:block">
+        <!-- Gradient Overlay -->
+        <div class="lg:absolute inset-0 bg-blue-950 opacity-60"></div>
+        <!-- Content on top of the image and gradient -->
+        <div class="lg:absolute inset-0 flex flex-col items-center justify-center">
+            <div class="grid grid-rows-6 lg:grid-rows-2 grid-flow-col gap-10">
+                <div class="bg-gray-200 lg:opacity-75 shadow-xl w-full h-max lg:w-72 lg:h-40 py-5 px-11 content-center">
+                    <p class="text-lg font-bold mb-1 text-center">2021</p>
+                    <p class="text-center">Excellence in Teaching Methodology<br />
+                        by Media Group of Jodhpur
+                    </p>
+                </div>
+                <div class="bg-gray-200 lg:opacity-75 shadow-xl w-full h-max lg:w-72 lg:h-40 py-5 px-11">
+                    <p class="text-lg font-bold mb-1 text-center">2023</p>
+                    <p class="text-center">
+                        Best Result in NEET(UG) 2023<br />
+                        by Times Of India Group
+                    </p>
+                </div>
+                <div class="bg-gray-200 lg:opacity-75 shadow-xl w-full h-max lg:w-72 lg:h-40 py-5 px-11">
+                    <p class="text-lg font-bold mb-1 text-center">2022</p>
+                    <p class="text-center">
+                        Excellence in Result IIT JEE in Jaipur<br />
+                        by Education Minister of Rajasthan Mr. B.D. Kalla
+                    </p>
+                </div>
+                <div class="bg-gray-200 lg:opacity-75 shadow-xl w-full h-max lg:w-72 lg:h-40 py-5 px-11">
+                    <p class="text-lg font-bold mb-1 text-center">2024</p>
+                    <p class="text-center">
+                        Best Result in IIT JEE, NEET, AND XII<br />
+                        by Minister of Education, Rajasthan, Mr. Madan dilawar
+                    </p>
+                </div>
+                <div class="bg-gray-200 lg:opacity-75 shadow-xl w-full h-max lg:w-72 lg:h-40 py-5 px-11">
+                    <p class="text-lg font-bold mb-1 text-center">2023</p>
+                    <p class="text-center">
+                        Best Emerging Coaching Institue in Jodhpur<br />
+                        by Maharaja Gajsingh Ji of Jodhpur
+                    </p>
+                </div>
+                <div class="bg-gray-200 lg:opacity-75 shadow-xl w-full h-max lg:w-72 lg:h-40 py-5 px-11">
+                    <p class="text-lg font-bold mb-1 text-center">2024</p>
+                    <p class="text-center">
+                        Knight of Rajasthan in Udaipur<br />
+                        by FM Media Group
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+{{ block.super }} <!-- Include parent scripts -->
+{% endblock %}
