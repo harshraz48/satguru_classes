@@ -11,7 +11,8 @@ public_collected/*
 .env*
 !.env.example
 docker-compose.override.yml
-
+migrations/
+migrations/*
 
 ### Python ####################################################################
 
