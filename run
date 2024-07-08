@@ -55,10 +55,10 @@ function lint {
   cmd flake8 "${@}"
 }
 
-function format:imports {
-  # Sort Python imports
-  cmd isort . "${@}"
-}
+# function format:imports {
+#   # Sort Python imports
+#   cmd isort . "${@}"
+# }
 
 function format {
   # Format Python code
@@ -67,7 +67,7 @@ function format {
 
 function quality {
   # Perform all code quality commands together
-  format:imports
+  # format:imports
   format
   lint
 }
