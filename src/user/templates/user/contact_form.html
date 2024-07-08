@@ -1,0 +1,30 @@
+{% extends "layouts/index.html" %}
+{% load static %}
+
+{% block title %}Satguru Classes{% endblock %}
+
+{% block content %}
+<form method="post">
+    <div class="w-full">
+        <div class="pb-5">
+            <p class="mt-1 text-sm leading-6 text-gray-600">Fill up this form to get a call back from us<br/> OR call us at:
+                9828072703, 6376947871, 0291-3581717
+            </p>
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="mt-8 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                <div class="sm:col-span-6 w-full">
+                    <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">
+                        {{ field.label_tag }}</label>
+                    <div class="mt-2">
+                        <input type="text" name="{{ field.name }}" id="{{ field.id_for_label }}"
+                            class="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-900 sm:text-sm sm:leading-6">
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</form>
+
+{% endblock %}

@@ -10,6 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A production ready example Django app that's using Docker and Docker Compose.">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
   <link rel="stylesheet" href="{% static 'css/app.css' %}">
   <script defer src="{% static 'js/app.js' %}"></script>
@@ -44,11 +45,11 @@
             <li class="p-1"><a href="{% url 'about_us' %}" class="hover:text-blue-400">About Us</a></li>
             <li class="p-1"><a href="{% url 'courses' %}" class="hover:text-blue-400">Courses Available</a></li>
             <li class="p-1"><a href="{% url 'results' %}" class="hover:text-blue-400">Results</a></li>
-            <li><button class="btn px-2 hover:bg-red-700">Contact Us</button></li>
+            <li><button id="openModal" class="btn px-2 hover:bg-red-700">Contact Us</button></li>
           </ul>
         </nav>
+      </div>
     </div>
-  </div>
   </div>
 
   <main class="w-full mx-auto mb-auto flex flex-col items-center">
@@ -69,16 +70,19 @@
         </p>
         <div class="flex inline-grid grid-cols-4 gap-4 w-full my-4">
           <section>
-            <a href="https://www.instagram.com/satguruclasses_/" target="_blank"><img src="{% static 'icons/instagram.svg' %}"></a>
+            <a href="https://www.instagram.com/satguruclasses_/" target="_blank"><img
+                src="{% static 'icons/instagram.svg' %}"></a>
           </section>
           <section>
-            <a href="https://www.facebook.com/satguruclasses2021?mibextid=LQQJ4d" target="_blank"><img src="{% static 'icons/facebook.svg' %}"></a>
+            <a href="https://www.facebook.com/satguruclasses2021?mibextid=LQQJ4d" target="_blank"><img
+                src="{% static 'icons/facebook.svg' %}"></a>
           </section>
           <section>
             <a href="https://g.co/kgs/cnWKPS1" target="_blank"><img src="{% static 'icons/location.svg' %}"></a>
           </section>
           <section>
-            <a href="https://www.youtube.com/@physicsbytcchauhansir1438" target="_blank"><img src="{% static 'icons/youtube.svg' %}"></a>
+            <a href="https://www.youtube.com/@physicsbytcchauhansir1438" target="_blank"><img
+                src="{% static 'icons/youtube.svg' %}"></a>
           </section>
         </div>
       </section>
@@ -138,7 +142,7 @@
           </section>
           <section class="m-2">
             <strong>Our Hostel and Library</strong>
-            <p>D-165, Kirti Nagar, Mata ka Than Road, Jodhpur(Raj.)</p>
+            <p>NG Tower, in front of Krishna Jwellers, Narsingh ji Circle, Mata Ka Than Road, Jodhpur(Raj.)</p>
           </section>
         </div>
       </section>
@@ -171,8 +175,58 @@
     <p class="py-3">Copyright &copy; 2024 Satguru Classes. All rights reserved.</p>
   </footer>
 
+  <!-- Modal -->
+  <div id="contactModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 z-50 flex justify-center items-center">
+    <div class="bg-white p-10 rounded-lg shadow-lg w-5/6 lg:w-1/3">
+      <div class="flex justify-between items-center mb-5">
+        <h2 class="text-xl font-bold">Contact Form</h2>
+        <button id="closeModal" class="text-gray-500">&times;</button>
+      </div>
+      <form id="contactForm">
+        {% csrf_token %}
+        <div id="formContent"></div>
+        <div class="mt-6 mb-2 flex items-center justify-end gap-x-3">
+          <button id="closeBtn" type="button"
+            class="rounded-md text-sm px-5 py-2 bg-red-600 hover:bg-red-400 font-semibold leading-6 text-white">Close</button>
+          <button type="submit"
+            class="rounded-md bg-blue-950 px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <!-- Block for additional scripts -->
-  {% block scripts %}{% endblock %}
+  {% block scripts %}
+  <script>
+    $(document).ready(function () {
+      $('#openModal').click(function () {
+        $.get("{% url 'contact_form' %}", function (data) {
+          $('#formContent').html($(data).find('form').html());
+        });
+        $('#contactModal').removeClass('hidden');
+      });
+
+      $('#closeModal').click(function () {
+        $('#contactModal').addClass('hidden');
+      });
+      $('#closeBtn').click(function () {
+        $('#contactModal').addClass('hidden');
+      });
+
+      $('#contactForm').on('submit', function (event) {
+        event.preventDefault();
+        $.ajax({
+          type: 'POST',
+          url: "{% url 'contact_form' %}",
+          data: $(this).serialize(),
+          success: function (response) {
+            window.location.href = "{% url 'success' %}";
+          }
+        });
+      });
+    });
+  </script>
+  {% endblock %}
 </body>
 
 </html>
