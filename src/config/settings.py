@@ -26,7 +26,7 @@ allowed_hosts = os.getenv("ALLOWED_HOSTS", ".localhost,127.0.0.1,[::1]")
 ALLOWED_HOSTS = list(map(str.strip, allowed_hosts.split(",")))
 
 # Email settings for local development
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # Email settings for production (example, replace with your actual settings)
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
