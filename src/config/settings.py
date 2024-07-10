@@ -29,7 +29,7 @@ if DEBUG:
     # Email settings for local development
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 else:
-    # Email settings for production (example, replace with your actual settings)
+    # Email settings for production
     EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
     EMAIL_HOST = "smtp.gmail.com"
     EMAIL_PORT = 587
