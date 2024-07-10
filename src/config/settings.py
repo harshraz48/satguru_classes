@@ -25,16 +25,17 @@ DEBUG = bool(strtobool(os.getenv("DEBUG", "false")))
 allowed_hosts = os.getenv("ALLOWED_HOSTS", ".localhost,127.0.0.1,[::1]")
 ALLOWED_HOSTS = list(map(str.strip, allowed_hosts.split(",")))
 
-# Email settings for local development
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-
-# Email settings for production (example, replace with your actual settings)
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.example.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'your_email@example.com'
-# EMAIL_HOST_PASSWORD = 'your_password'
+if DEBUG:
+    # Email settings for local development
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+else:
+    # Email settings for production (example, replace with your actual settings)
+    EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+    EMAIL_HOST = "smtp.gmail.com"
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    EMAIL_HOST_USER = "infostgclasses@gmail.com"
+    EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD", "password")
 
 
 # Application definitions

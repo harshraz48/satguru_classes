@@ -13,8 +13,8 @@ def contact_form(request):
             send_mail(
                 "New Contact Form Submission",
                 f"Name: {user.name}\nPhone: {user.phone}\nEmail: {user.email}",
-                "from@example.com",
-                ["to@example.com"],
+                "infostgclasses@gmail.com",
+                ["stgclasses11@gmail.com"],
                 fail_silently=False,
             )
             return redirect("success")
